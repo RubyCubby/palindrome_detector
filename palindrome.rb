@@ -26,10 +26,11 @@ data_hash = JSON.parse(file)
 palindrome = Palindrome.new
 I18n.config.available_locales = :en
 
-data_hash.each { |element|
-  element.each_value {|value|
+data_hash.each do |element|
+  element.each_value do |value|
     value = I18n.transliterate(value)
     value.tr!('-\'', '')
     palindrome.is_palindrome(value.downcase)
-  }
-}
+  end
+end
+
