@@ -33,4 +33,3 @@ data_hash.each { |element|
     palindrome.is_palindrome(value.downcase)
   }
 }
-''
